@@ -4674,6 +4674,11 @@ react-native-tab-view@~0.0.77:
   dependencies:
     prop-types "^15.6.0"
 
+react-native-timer-countdown@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-timer-countdown/-/react-native-timer-countdown-5.0.1.tgz#4d2358f60dad4516cb0d52ebfe111b39bb2e2cb4"
+  integrity sha512-jfE/xBae/Pddc3OPV+P1hLf2MZbJoP1UqQSwXXXtx89ixcAjbv39Ob8a2ud9+Tb9he8DDLO5WtxemfrX/m2xzQ==
+
 react-native-view-shot@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/react-native-view-shot/-/react-native-view-shot-2.6.0.tgz#3b23675826f67658366352c4b97b59a6aded2f43"

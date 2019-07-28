@@ -4,11 +4,12 @@ import { Card } from 'react-native-elements';
 import CountDown from 'react-native-countdown-component';
 import { SPARTACUS } from '../shared/spartacus';
 
-class RenderWorkout extends Component {
+class Workout extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            interval: 0
+            interval: 0,
+            spartacus: SPARTACUS
         }
     }
 
@@ -19,10 +20,10 @@ class RenderWorkout extends Component {
     }
 
     render() {
-        const spartacus = this.props.spartacus;
-        let activeSpartacus = spartacus.filter((spartacus) => spartacus.id === this.state.interval);
-
+        let activeSpartacus = this.state.spartacus.filter((spartacus) => spartacus.id === this.state.interval);
+        let activeTime = activeSpartacus.map((time) => time.seconds);
         console.log(activeSpartacus);
+        console.log(activeTime);
         const renderWorkoutScene = ({ item, index }) => {
             return (
                 <View key={index} style={{ margin: 20 }}>
@@ -34,35 +35,20 @@ class RenderWorkout extends Component {
             );
         }
         return (
-            <Card>
-                <CountDown
-                    size={20}
-                    timeToShow={['M', 'S']}
-                    until={activeSpartacus.seconds}
-                    onFinish={() => this.countDownOver()} />
-                <FlatList
-                    data={activeSpartacus}
-                    renderItem={renderWorkoutScene}
-                    keyExtractor={item => item.id.toString()}
-                />
-            </Card>
-        );
-    }
-}
-
-class Workout extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            spartacus: SPARTACUS
-        }
-    }
-
-    render() {
-        return (
             <ScrollView>
-                <Text>Timer Here</Text>
-                <RenderWorkout spartacus={this.state.spartacus} />
+                <Card>
+                    <CountDown
+                        key={this.state.interval}
+                        size={20}
+                        timeToShow={['M', 'S']}
+                        until={+activeTime}
+                        onFinish={() => this.countDownOver()} />
+                    <FlatList
+                        data={activeSpartacus}
+                        renderItem={renderWorkoutScene}
+                        keyExtractor={item => item.id.toString()}
+                    />
+                </Card>
             </ScrollView>
         );
     }

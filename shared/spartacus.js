@@ -6,7 +6,7 @@ export const SPARTACUS =
             description: "With both hands, grab one end of a dumbbell to hold it vertically in front of your chest, and stand with your feet slightly beyond shoulder width [A]. Keeping your back naturally arched, push your hips back, bend your knees, and lower your body until the tops of your thighs are at least parallel to the floor [B]. Pause, and push yourself up to the starting position. If that's too hard, do a body-weight squat instead.",
             positionA: "",
             positionB: "",
-            seconds: 60,
+            seconds: 10,
         },
         {
             id: 1,
@@ -14,7 +14,7 @@ export const SPARTACUS =
             description: "Assume a pushup position with your arms completely straight. Your body should form a straight line from your head to your ankles [A]. Without allowing your lower-back posture to change, lift your right foot off the floor and slowly move your right knee toward your chest [B]. Return to the starting position, and repeat with your left leg. Alternate back and forth for the duration of the set.",
             positionA: "",
             positionB: "",
-            seconds: 60,
+            seconds: 10,
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ export const SPARTACUS =
             description: "Hold a dumbbell (or a kettlebell) at arm's length in front of your waist. Without rounding your lower back, bend at your hips and knees and swing the dumbbell between your legs [A]. Keeping your arm straight, thrust your hips forward and swing the dumbbell to shoulder level as you rise to a standing position [B]. Swing the weight back and forth. At the 30-second mark, switch arms.",
             positionA: "",
             positionB: "",
-            seconds: 60,
+            seconds: 10,
         },
         {
             id: 3,
